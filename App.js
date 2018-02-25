@@ -28,7 +28,6 @@ export default class App extends Component<Props> {
 
   componentDidMount() {
     // //this.soundObject.loadAsync(require('./cat_wow.mp3'));
-    console.log("coponent mounted!");
     Sound.setCategory('Playback');
     this.wow = new Sound('cat_wow.mp3', Sound.MAIN_BUNDLE, (error) => {
       if (error) {
@@ -41,7 +40,6 @@ export default class App extends Component<Props> {
   }
 
   onPress = () => {
-    console.log("pressing!");
     this.setState({
       pressed: !this.state.pressed,
     })
